@@ -25,7 +25,7 @@ void Imprimir_list(int a[], int n, char* title) {
 
 void Odd_evenOpenMP(int a[], int n) {
     int phase, i, tmp;
-    
+    //usa los mimso phtreads y los pone en bloques -t +r
     for (phase = 0; phase < n; phase++) {
         if (phase % 2 == 0)
 #           pragma omp parallel for num_threads(thread_count) \

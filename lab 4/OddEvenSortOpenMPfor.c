@@ -25,7 +25,7 @@ void Imprimir_list(int a[], int n, char* title) {
 
 void Odd_even2OpenMP(int a[], int n) {
     int phase, i, tmp;
-    
+//distribuye las operaciones phtreads y bifurca cada uno de ellos
 #  pragma omp parallel num_threads(thread_count) \
     default(none) shared(a, n) private(i, tmp, phase)
     for (phase = 0; phase < n; phase++) {
